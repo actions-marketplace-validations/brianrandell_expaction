@@ -1,0 +1,23 @@
+name: ExpAction
+author: Brian Randell
+description:  Test GitHub Actions and .NET Core
+
+branding:
+  icon: power
+  color: red
+
+inputs:
+  greeting:
+    description: Greeting
+    required: false
+    default: ''
+
+outputs:
+  message:
+    description: Message sent to the world ...
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    GREETING: ${{ inputs.greeting }}
