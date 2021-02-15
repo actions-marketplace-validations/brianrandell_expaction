@@ -1,0 +1,13 @@
+name: Test My Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test My Action
+    steps:
+    - name: Run The Action
+      uses: ./
+      with: 
+        greeting: 'Hello Good Sir!'
