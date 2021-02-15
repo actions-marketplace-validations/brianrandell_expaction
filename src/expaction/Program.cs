@@ -13,7 +13,7 @@ namespace expaction
             }
             Console.WriteLine("::set-output name=message::Hello, Github Actions");
 
-            foreach (string file in System.IO.Directory.EnumerateFiles("/github/workspace", "*"))
+            foreach (string file in System.IO.Directory.EnumerateFiles("/github/workspace", "*", System.IO.SearchOption.AllDirectories))
             {
                 Console.WriteLine(file);
             }
