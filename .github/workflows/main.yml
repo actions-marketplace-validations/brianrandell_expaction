@@ -12,6 +12,12 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Run The Action
+      id: custom-action
       uses: ./
       with: 
         greeting: 'Hello Good Sir!'
+
+    - name: Show Output
+      env:
+        message: ${{ custom-action.message }}
+      run: echo "$message"
