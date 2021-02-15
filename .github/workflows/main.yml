@@ -8,6 +8,9 @@ jobs:
     name: Test My Action
     runs-on: 'ubuntu-latest'
     steps:
+    - name: Checkout bits
+      uses: actions/checkout@v2
+      
     - name: Run The Action
       uses: ./
       with: 
