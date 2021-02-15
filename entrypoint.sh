@@ -6,4 +6,4 @@ dotnet restore
 echo "Restored"
 dotnet build
 echo "Build"
-dotnet run --project expaction -- --title "Huzzah"
+dotnet run --project expaction -- --greeting "$GREETING"
