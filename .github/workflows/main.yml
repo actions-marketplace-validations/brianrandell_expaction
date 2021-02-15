@@ -19,5 +19,5 @@ jobs:
 
     - name: Show Output
       env:
-        message: ${{ steps.custom-action.ouputs.message }}
+        message: ${{ steps.custom-action.outputs.message }}
       run: echo "$message"
